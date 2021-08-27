@@ -1,0 +1,7 @@
+{
+  "projeto_nome": "Digite o Nome do Projeto",
+  "projeto_nome_curto": "{{ cookiecutter.projeto_nome.lower().replace(' ', '-') }}",
+  "projeto_descricao": "Digite a descrição do projeto",
+  "repositorio_url": "Digite o endereço do repositorio para fazer o git remote",
+  "repositorio_branch_principal": "Digite o nome do branch principal"
+}
