@@ -48,9 +48,5 @@ Thumbs.db
 *.mov
 *.wmv
 
-.flake8
-.pre-commit-config.yaml
-.pydocstyle.ini
-.pylintrc
-mypy.ini
+
 .venv/
