@@ -1,4 +1,4 @@
-# {{cookiecutter.projeto_nome_curto}}
+# Python Develop Environment
 
 ## Índice
 <!-- TABLE OF CONTENTS -->
@@ -10,13 +10,11 @@
    * [Roadmap](#Roadmap)
    * [Licença](#Licença)
    * [Contato](#Contato)
-   * [Tecnologias](#Tecnologias)
+
 <!--te-->
 
 ## Sobre o projeto
-{{cookiecutter.projeto_descricao}}
-
-<!-- GETTING STARTED -->
+Este projeto visa fornecer uma interface única para o provisionamento de um ambiente de desenvolvimento em python, utilizando o cookiecutter.
 
 ## Como usar
 
@@ -68,7 +66,7 @@
 
 ## Roadmap
 
-Veja as [open issues]({{cookiecutter.repositorio_url}}/-/issues) para obter uma lista de features propostas (e problemas conhecidos).
+Veja as [open issues](https://github.com/felipe-almeida-costa-leite/cookiecutter-python-development-environment/issues) para obter uma lista de features propostas (e problemas conhecidos).
 
 ## Contribuindo
 
@@ -82,14 +80,10 @@ Quaisquer contribuições que você fizer será **muito apreciada**.
 
 ## Licença
 
-Sem licença. Acesse `LICENSE` para mais informações.
+Acesse `LICENSE` para mais informações.
 
 ## Contato
 
-Fábio Battestin - [E-mail](mailto:fabio.leite@b3.com.br) - fabio.leite@b3.com.br
+Felipe Leite - [E-mail](mailto:felipecostasilvaleite@hotmail.com) - felipecostasilvaleite@hotmail.com
 
-Project Link: [{{cookiecutter.projeto_nome_curto}}]({{cookiecutter.repositorio_url}})
-
-## Tecnologias
-
-* [Spark](https://spark.apache.org/)
+Project Link: [Python Develop Environment](https://github.com/felipe-almeida-costa-leite/cookiecutter-python-development-environment)

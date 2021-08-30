@@ -139,6 +139,27 @@ def activate_git_repository() -> bool:
         return False
 
 
+def change_conf_sphinx() -> bool:
+    """
+    Change Conf Sphinx
+
+    Parameter
+
+    Return
+
+    Example
+        >>> change_conf_sphinx()
+        True
+
+    """
+    try:
+        os.system('rm -rfv docs/conf.py &&'
+                  'mv conf.py docs/')
+        return True
+    except KeyboardInterrupt:
+        return False
+
+
 if __name__ == '__main__':
     install_pkgs_pip('virtualenv')
     create_virtual_env()
