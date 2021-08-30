@@ -60,7 +60,7 @@ def active_and_install_packages_pip() -> bool:
     """
     try:
         os.system(f'. .venv/bin/activate &&'
-                  f'pip install -r requirements &&'
+                  f'pip install -r requirements.txt'
                   )
         return True
     except KeyboardInterrupt:
