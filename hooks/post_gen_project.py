@@ -60,14 +60,7 @@ def active_and_install_packages_pip() -> bool:
     """
     try:
         os.system(f'. .venv/bin/activate &&'
-                  f'pip install flake8 &&'
-                  f'pip install pep8-naming &&'
-                  f'pip install pylint &&'
-                  f'pip install black &&'
-                  f'pip install mypy &&'
-                  f'pip install pydocstyle &&'
-                  f'pip install pre-commit &&'
-                  f'pip install Sphinx'
+                  f'pip install -r requirements &&'
                   )
         return True
     except KeyboardInterrupt:
@@ -92,7 +85,9 @@ def activate_sphinx() -> bool:
     try:
         os.system('. .venv/bin/activate &&'
                   'cd docs &&'
-                  'sphinx-quickstart')
+                  'sphinx-quickstart &&'
+                  'rm -rfv conf.py &&'
+                  'cp ../conf.py docs/')
         return True
     except KeyboardInterrupt:
         return False
@@ -134,27 +129,6 @@ def activate_git_repository() -> bool:
     try:
         os.system('git init &&'
                   'git remote add -f -t {{cookiecutter.repositorio_branch_principal}} -m {{cookiecutter.repositorio_branch_principal}} origin {{cookiecutter.repositorio_url}}')
-        return True
-    except KeyboardInterrupt:
-        return False
-
-
-def change_conf_sphinx() -> bool:
-    """
-    Change Conf Sphinx
-
-    Parameter
-
-    Return
-
-    Example
-        >>> change_conf_sphinx()
-        True
-
-    """
-    try:
-        os.system('rm -rfv docs/conf.py &&'
-                  'mv conf.py docs/')
         return True
     except KeyboardInterrupt:
         return False

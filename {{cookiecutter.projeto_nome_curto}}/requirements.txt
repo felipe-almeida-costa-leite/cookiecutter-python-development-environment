@@ -1,0 +1,9 @@
+flake8
+pep8-naming
+pylint
+black
+mypy
+pydocstyle
+pre-commit
+Sphinx
+sphinx-theme
