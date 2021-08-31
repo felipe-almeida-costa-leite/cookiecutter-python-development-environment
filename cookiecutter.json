@@ -1,4 +1,5 @@
 {
+  "nome_autor": "Digite o Nome do Autor",
   "projeto_nome": "Digite o Nome do Projeto",
   "projeto_nome_curto": "{{ cookiecutter.projeto_nome.lower().replace(' ', '-') }}",
   "projeto_descricao": "Digite a descrição do projeto",

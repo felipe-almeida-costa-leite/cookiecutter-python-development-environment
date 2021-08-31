@@ -85,9 +85,10 @@ def activate_sphinx() -> bool:
     try:
         os.system('. .venv/bin/activate &&'
                   'cd docs &&'
-                  'sphinx-quickstart &&'
+                  'sphinx-quickstart -p {{cookiecutter.projeto_nome_curto}} -a {{cookiecutter.nome_autor}} -v 0.0.0 -l pt_BR &&'
                   'rm -rfv conf.py &&'
-                  'cp ../conf.py docs/')
+                  'cd .. &&'
+                  'cp conf.py docs/')
         return True
     except KeyboardInterrupt:
         return False
