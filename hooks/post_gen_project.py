@@ -85,7 +85,7 @@ def activate_sphinx() -> bool:
     try:
         os.system('. .venv/bin/activate &&'
                   'cd docs &&'
-                  'sphinx-quickstart -p {{cookiecutter.projeto_nome_curto}} -a {{cookiecutter.nome_autor}} -v 0.0.0 -l pt_BR &&'
+                  'sphinx-quickstart -q --no-sep -p {{cookiecutter.projeto_nome_curto}} -a "{{cookiecutter.nome_autor}}" -v "0.0.0" -l pt_BR &&'
                   'rm -rfv conf.py &&'
                   'cd .. &&'
                   'cp conf.py docs/')

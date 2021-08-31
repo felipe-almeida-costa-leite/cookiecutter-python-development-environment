@@ -21,8 +21,8 @@ sys.path.insert(3, os.path.abspath('../service/'))
 # -- Project information -----------------------------------------------------
 
 project = '{{cookiecutter.projeto_nome_curto}}'
-copyright = '2021, {{cookiecutter.projeto_nome_curto}}'
-author = '{{cookiecutter.projeto_nome_curto}}'
+copyright = '2021, {{cookiecutter.nome_autor}}'
+author = '{{cookiecutter.nome_autor}}'
 
 # The full version, including alpha/beta/rc tags
 release = '0.0.0'
