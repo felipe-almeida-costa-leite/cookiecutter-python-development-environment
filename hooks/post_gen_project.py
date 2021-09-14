@@ -8,7 +8,7 @@ import subprocess
 import logging
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
-logging.basicConfig(format='%(acstime)s -%(levelname)s - %(message)s', level=logging.INFO)
+logging.basicConfig(format='%(asctime)s -%(levelname)s - %(message)s', level=logging.INFO)
 
 
 def install_pkgs_pip(pkg: str) -> bool:
@@ -93,7 +93,8 @@ def activate_sphinx() -> bool:
                   'sphinx-quickstart -q --no-sep -p {{cookiecutter.projeto_nome_curto}} -a "{{cookiecutter.projeto_nome_curto}}" -v "0.0.0" -l pt_BR &&'
                   'rm -rfv conf.py &&'
                   'cd .. &&'
-                  'cp conf.py docs/')
+                  'cp conf.py docs/ &&'
+                  'rm -rfv conf.py')
         logging.info(f'Sphinx: start successfully')
         return True
     except KeyboardInterrupt:

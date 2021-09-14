@@ -86,10 +86,8 @@ Sem licença. Acesse `LICENSE` para mais informações.
 
 ## Contato
 
-Fábio Battestin - [E-mail](mailto:fabio.leite@b3.com.br) - fabio.leite@b3.com.br
+Felipe Leite - [E-mail](mailto:felipecostasilvaleite@hotmail.com) - felipecostasilvaleite@hotmail.com
 
 Project Link: [{{cookiecutter.projeto_nome_curto}}]({{cookiecutter.repositorio_url}})
 
 ## Tecnologias
-
-* [Spark](https://spark.apache.org/)
