@@ -1,19 +1,10 @@
 repos:
 -   repo: local
     hooks:
-    - id: black
-      name: black
-      language: system
-      entry: bash -c 'source .venv/bin/activate && black .'
-      always_run: false
-      pass_filenames: true
-      stages: [commit]
--   repo: local
-    hooks:
     - id: flake8
-      name: flake8
+      name: flake8Black
       language: system
-      entry: bash -c 'source .venv/bin/activate && flake8 .'
+      entry: bash -c '. .venv/bin/activate && black . && flake8 .'
       always_run: false
       pass_filenames: true
       stages: [commit]
@@ -22,7 +13,7 @@ repos:
     - id: pydocstyle
       name: pydocstyle
       language: system
-      entry: bash -c 'source .venv/bin/activate && pydocstyle .'
+      entry: bash -c '. .venv/bin/activate && pydocstyle .'
       always_run: false
       pass_filenames: true
       stages: [commit]
@@ -31,7 +22,7 @@ repos:
     - id: mypy
       name: mypy
       language: system
-      entry: bash -c 'source .venv/bin/activate && mypy .'
+      entry: bash -c '. .venv/bin/activate && mypy .'
       always_run: false
       pass_filenames: true
       stages: [commit]
@@ -39,7 +30,7 @@ repos:
     hooks:
       - id: requirements
         name: requirements
-        entry: bash -c 'venv/bin/pip3 freeze > requirements.txt; git add requirements.txt'
+        entry: bash -c '. .venv/bin/activate && .venv/bin/pip3 freeze > requirements.txt; git add requirements.txt'
         language: system
         pass_filenames: false
         stages: [commit]

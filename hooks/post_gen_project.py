@@ -136,8 +136,10 @@ def activate_git_repository() -> bool:
 
     """
     try:
-        os.system('git init &&'
-                  'git remote add -f -t {{cookiecutter.repositorio_branch_principal}} -m {{cookiecutter.repositorio_branch_principal}} origin {{cookiecutter.repositorio_url}}')
+        os.system('git init')
+        os.system('git remote add -f -t {{cookiecutter.repositorio_branch_principal}} -m {{cookiecutter.repositorio_branch_principal}} origin {{cookiecutter.repositorio_url}}')
+        os.system('git checkout -f main')
+        os.system('git checkout -b develop main')
         logging.info(f'Git: Start successfully')
         return True
     except KeyboardInterrupt:
